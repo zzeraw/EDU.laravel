@@ -51,7 +51,7 @@ class ArticlesController extends Controller {
     {
         $article = Article::findOrFail($id);
 
-        $article->update($request->all);
+        $article->update($request->all());
 
         return redirect('articles');
     }
